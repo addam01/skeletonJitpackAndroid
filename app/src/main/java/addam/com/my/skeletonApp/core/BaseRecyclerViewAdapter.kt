@@ -1,5 +1,6 @@
 package addam.com.my.skeletonApp.core
 
+import addam.com.my.skeletonApp.BR
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
