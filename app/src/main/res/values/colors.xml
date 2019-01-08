@@ -3,4 +3,70 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimaryLight">@color/white</color>
+    <color name="colorPrimaryLighter">#64B5F6</color>
+
+    <color name="colorPrimaryDisabled">#cfc5e3</color>
+
+    <color name="colorGreyPrimary">#f2f4fc</color>
+    <color name="colorGreySecondary">#b5c4e5</color>
+    <color name="colorGreyDark">#808DA7</color>
+    <color name="colorGreyDarker">#334264</color>
+
+    <color name="colorOrange">#fd7a30</color>
+    <color name="colorLightRed">#EB7B89</color>
+    <color name="colorRed">#E73049</color>
+    <color name="colorLightBlue">#9abafa</color>
+    <color name="colorBlue">#4d86fc</color>
+    <color name="colorLightGreen">#6ee397</color>
+    <color name="colorGreen">#24dd67</color>
+    <color name="colorYellow">#fad23e</color>
+
+    <!--generic colors-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <!--Text colors-->
+    <color name="textColorDark">@color/colorGreyDark</color>
+    <color name="hyperlinkRedColor">#a60c2e</color>
+    <color name="disable_color">#C5D5E2</color>
+    <color name="enable_color">@color/colorPrimary</color>
+    <color name="pinTextColor">#808DA7</color>
+
+    <!--Color Palettes-->
+    <!--<color name="purple_dark_grey">@color/colorPrimary</color>-->
+    <color name="purple_light_grey">@color/colorGreyDark</color>
+    <color name="purple_light">@color/colorPrimaryLighter</color>
+    <color name="purple_dark">@color/colorPrimaryDark</color>
+    <color name="pink">#F0279E</color>
+
+    <!--Grey-->
+    <color name="grey_light">@color/colorGreyPrimary</color>
+    <color name="grey_light_medium">@color/colorGreySecondary</color>
+    <color name="grey_medium">#808DA8</color>
+    <color name="grey_dark">@color/colorGreyDarker</color>
+
+    <!--Complimentary-->
+    <color name="greyish">#aaa8a8</color>
+    <color name="mine_shaft">#303030</color>
+
+    <!--shadows-->
+    <color name="first_shadow">#00CCCCCC</color>
+    <color name="second_shadow">#10CCCCCC</color>
+    <color name="third_shadow">#20CCCCCC</color>
+    <color name="fourth_shadow">#30CCCCCC</color>
+    <color name="fifth_shadow">#50CCCCCC</color>
+    <color name="colorDisabled">#F5F5F5</color>
+
+    <color name="separator_gray">#E6E6E6</color>
+    <color name="slashed_price_color">#D82223</color>
+    <color name="save_text_color">@color/white</color>
+    <color name="pi_selected_color">#3897F0</color>
+    <color name="pi_default_color">#B2B2B2</color>
+
+    <!-- Transparent -->
+    <color name="grey_transparency_50">#80757575</color>
+
+    <!-- pager indicator color -->
+    <color name="inactive_indicator">#3a86ac</color>
 </resources>

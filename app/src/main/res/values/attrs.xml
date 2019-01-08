@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<attr name="header_text" format="string"/>
+	<attr name="hint_text" format="string"/>
+	<attr name="has_next_focus" format="boolean"/>
+	<attr name="enabled" format="boolean"/>
+	<attr name="show_validated" format="boolean"/>
+	<attr name="show_focus" format="boolean"/>
+	<attr name="normal_background" format="integer"/>
+	<attr name="error_background" format="integer"/>
+
+	<declare-styleable name="CustomEditText">
+		<attr name="keyboard_layout"/>
+		<attr name="header_text"/>
+		<attr name="hint_text"/>
+		<attr name="has_next_focus"/>
+		<attr name="enabled"/>
+		<attr name="show_validated"/>
+		<attr name="show_focus"/>
+		<attr name="show_password" format="boolean"/>
+		<attr name="is_password" format="boolean"/>
+		<attr name="is_dob" format="boolean"/>
+		<attr name="normal_background"/>
+		<attr name="error_background"/>
+		<attr name="digits" />
+		<attr name="drawableStart" format="reference" />
+		<attr name="drawableEnd" format="reference" />
+	</declare-styleable>
+
+	<attr name="keyboard_layout" format="enum">
+		<enum name="none" value="0"/>
+		<enum name="mykad_default" value="1"/>
+		<enum name="mykad_basic" value="2" />
+		<enum name="mykad_roadtax" value="3" />
+		<enum name="passport" value="4" />
+		<enum name="phone_no" value="5" />
+		<enum name="email" value="6" />
+		<enum name="postcode" value="7" />
+		<enum name="city" value="8" />
+		<enum name="address" value="9" />
+		<enum name="car_no" value="10" />
+		<enum name="name" value="11" />
+		<enum name="password" value="12" />
+		<enum name="login_username" value="13" />
+		<enum name="new_username" value="14" />
+		<enum name="mykad_cdl" value="15" />
+		<enum name="transaction_id" value="16" />
+		<enum name="mykad_passport" value="17" />
+		<enum name="credit_card" value="18" />
+	</attr>
+</resources>

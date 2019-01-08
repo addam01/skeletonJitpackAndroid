@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">skeleton-app</string>
+    <string name="password_show">Show</string>
+    <string name="password_hide">Hide</string>
+    <string name="next">Next</string>
+
+    <string name="error_no_connection">Offline. Please enable your Internet connection</string>
+    <string name="error_invalid_username_password">Your mobile number and password do not match</string>
+    <string name="error_password_not_match">Password does not match</string>
+    <string name="login_not_match">Invalid mobile number or password</string>
+    <string name="keyboard_address" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;()-,./@#:</string>
+    <string name="keyboard_city" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="keyboard_car_reg_no" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-</string>
+    <string name="keyboard_mykad_organization" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-/().:</string>
+    <string name="keyboard_mykad" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-*</string>
+    <string name="keyboard_mykad_basic" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="keyboard_mykad_no_asterisk" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-</string>
+    <string name="keyboard_mykad_passport_army_police" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-/</string>
+    <string name="keyboard_passport" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-</string>
+    <string name="keyboard_number_only" translatable="false">0123456789</string>
+    <string name="keyboard_alphanumeric" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="keyboard_name" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ`@()\'/.-</string>
+    <string name="keyboard_username" translatable="false">0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ`@()\'/.~!$%^-*_=+}{\</string>
+    <string name="keyboard_username_new" translatable="false">0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="keyboard_password" translatable="false">0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&amp;'()*+,-./:;&lt;=>?@[\]^_`{|}~</string>
+    <string name="keyboard_email" translatable="false">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@~!$%^.&amp;*_=+}{\'?</string>
+    <string name="login">Login</string>
+
+    <!--Menu-->
+
+    <string name="menu_transactions">Transactions</string>
+    <string name="menu_help">Help &amp; Support</string>
+    <string name="menu_about">About Us</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_setting">Settings</string>
+    <string name="menu_promotion">Promotion</string>
+
+
 </resources>

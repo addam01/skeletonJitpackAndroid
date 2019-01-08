@@ -88,3 +88,5 @@ fun setSrcDrawable(view: ImageView, url: String?) {
         view.visibility = View.GONE
     }
 }
+
+

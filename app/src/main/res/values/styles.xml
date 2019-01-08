@@ -6,6 +6,100 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:datePickerDialogTheme">@style/MyDatePickerDialogTheme</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">@color/colorPrimary</item>
+    </style>
+
+    <!--Button-->
+    <style name="BaseButton" parent="@android:style/Widget.Button"/>
+
+    <style name="ConfirmButton" parent="@style/BaseButton">
+        <item name="android:layout_height">@dimen/confirm_button_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/raleway_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/confirm_button</item>
+    </style>
+
+    <style name="SelectButton" parent="@style/BaseButton">
+        <item name="android:layout_height">@dimen/confirm_button_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/raleway_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/select_button</item>
+    </style>
+
+    <style name="RoundedButton" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_height">@dimen/confirm_button_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">@dimen/space_small_8dp</item>
+        <item name="android:paddingRight">@dimen/space_small_8dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/btn_rounded_yellow</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/small_text_12sp</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Typography -->
+    <style name="BaseTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/textColorDark</item>
+    </style>
+
+    <style name="BaseTextView.OpenSansRegular">
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:textSize">@dimen/medium_text_16sp</item>
+    </style>
+
+    <style name="BaseTextView.OpenSansItalic">
+        <item name="android:fontFamily">@font/open_sans_italic</item>
+        <item name="android:textSize">@dimen/medium_text_14sp</item>
+    </style>
+
+    <style name="BaseTextView.OpenSansBold">
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+        <item name="android:textSize">@dimen/medium_text_14sp</item>
+    </style>
+
+    <style name="BaseTextView.OpenSansSemiBold">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textSize">@dimen/medium_text_16sp</item>
+    </style>
+
+    <style name="BaseTextView.RalewayRegular">
+        <item name="android:fontFamily">@font/raleway_regular</item>
+        <item name="android:textSize">@dimen/medium_text_16sp</item>
+    </style>
+
+    <style name="BaseTextView.RalewayBold">
+        <item name="android:fontFamily">@font/raleway_bold</item>
+        <item name="android:textSize">@dimen/medium_text_16sp</item>
+    </style>
+
+    <style name="PinError" parent="TextAppearance.Design.Error">
+        <item name="android:fontFamily">@font/open_sans_italic</item>
+        <item name="android:textColor">@color/hyperlinkRedColor</item>
+        <item name="android:textSize">@dimen/medium_text_14sp</item>
+    </style>
+
+    <style name="BaseTextView.RaleWayBody" parent="BaseTextView.RalewayRegular">
+        <item name="android:textColor">@color/grey_light_medium</item>
+        <item name="android:textSize">@dimen/medium_text_16sp</item>
+    </style>
+
+    <style name="BaseTextView.OpenSansBody" parent="BaseTextView.OpenSansRegular">
+        <item name="android:textColor">@color/grey_light_medium</item>
+        <item name="android:textSize">@dimen/medium_text_16sp</item>
     </style>
 
 </resources>
