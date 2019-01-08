@@ -48,4 +48,9 @@
 		<enum name="mykad_passport" value="17" />
 		<enum name="credit_card" value="18" />
 	</attr>
+
+	<declare-styleable name="CustomTextViewPrefix">
+		<attr name="textPrefix"/>
+		<attr name="textSuffix"/>
+	</declare-styleable>
 </resources>

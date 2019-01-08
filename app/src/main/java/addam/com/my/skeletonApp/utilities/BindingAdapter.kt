@@ -1,11 +1,14 @@
 package addam.com.my.skeletonApp.utilities
 
 import addam.com.my.skeletonApp.utilities.observables.ObservableBackground
+import addam.com.my.skeletonApp.widgets.CustomEditText
 import android.databinding.BindingAdapter
+import android.databinding.InverseBindingAdapter
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.CardView
+import android.text.TextUtils
 import android.view.View
 import android.widget.ImageView
 
@@ -89,4 +92,20 @@ fun setSrcDrawable(view: ImageView, url: String?) {
     }
 }
 
+@BindingAdapter("android:text")
+fun setText(view: CustomEditText, text: String?) {
+    if (text != null && text != view.getText()) {
+        view.setText(text)
+    }
+}
+
+@BindingAdapter("header_text")
+fun setHeaderText(textView: CustomEditText, headerText: String) {
+    if (!TextUtils.isEmpty(headerText)) {
+        textView.setHeaderText(headerText)
+    }
+}
+
+@InverseBindingAdapter(attribute = "android:text", event = "android:textAttrChanged")
+fun getText(view: CustomEditText): String = view.getText()
 

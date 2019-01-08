@@ -1,4 +1,4 @@
-package addam.com.my.skeletonApp.feature
+package addam.com.my.skeletonApp.feature.main
 
 import addam.com.my.skeletonApp.R
 import android.support.v7.app.AppCompatActivity

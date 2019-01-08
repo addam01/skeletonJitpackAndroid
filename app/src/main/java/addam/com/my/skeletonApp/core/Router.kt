@@ -1,6 +1,6 @@
 package addam.com.my.skeletonApp.core
 
-import addam.com.my.skeletonApp.feature.MainActivity
+import addam.com.my.skeletonApp.feature.main.MainActivity
 
 /**
  * Created by Addam on 7/1/2019.
