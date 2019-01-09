@@ -1,6 +1,6 @@
 package addam.com.my.skeletonApp
 
-import addam.com.my.skeletonApp.BuildConfig
+import addam.com.my.skeletonApp.di.DaggerAppComponent
 import android.app.Activity
 import android.app.Application
 import com.github.ajalt.timberkt.Timber
@@ -21,6 +21,10 @@ class AppApplication: Application(), HasActivityInjector {
         super.onCreate()
         initLogger()
 
+        DaggerAppComponent.builder()
+            .application(this)
+            .build()
+            .inject(this)
 
     }
 
