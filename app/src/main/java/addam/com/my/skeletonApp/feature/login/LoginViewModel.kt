@@ -16,7 +16,7 @@ import io.reactivex.rxkotlin.subscribeBy
 
 class LoginViewModel(
     private val schdulerProvider: SchedulerProvider,
-    private val generalRepository: GeneralRepository, val appPreference: AppPreference) : ViewModel() {
+    private val generalRepository: GeneralRepository, private val appPreference: AppPreference) : ViewModel() {
 
     var username = ObservableString("")
     val startPinActivityEvent: StartActivityEvent = StartActivityEvent()

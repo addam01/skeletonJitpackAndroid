@@ -10,4 +10,6 @@ import javax.inject.Singleton
 @Singleton
 class DatabaseRepository @Inject constructor(private val userDao: UserDao){
     fun getUser(): Single<User> = userDao.getUser()
+
+    fun insertUser(user: User) = userDao.insert(user)
 }

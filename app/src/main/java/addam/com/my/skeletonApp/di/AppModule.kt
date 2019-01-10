@@ -2,7 +2,6 @@ package addam.com.my.skeletonApp.di
 
 import addam.com.my.skeletonApp.AppPreference
 import addam.com.my.skeletonApp.AppResourceProvider
-import addam.com.my.skeletonApp.Constants
 import addam.com.my.skeletonApp.core.Router
 import addam.com.my.skeletonApp.core.util.SchedulerProvider
 import addam.com.my.skeletonApp.database.AppDatabase
@@ -10,9 +9,6 @@ import addam.com.my.skeletonApp.rest.GeneralService
 import android.app.Application
 import android.arch.persistence.room.Room
 import android.content.Context
-import android.text.SpannableStringBuilder
-import android.util.Base64
-import com.commonsware.cwac.saferoom.SafeHelperFactory
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -69,10 +65,10 @@ class AppModule {
     @Provides
     @Singleton
     fun provideDb(application: Application): AppDatabase {
-        val factory = SafeHelperFactory.fromUser(SpannableStringBuilder(String(Base64.decode(Constants.getDBPassphrase(), Base64.DEFAULT))))
+//        val factory = SafeHelperFactory.fromUser(SpannableStringBuilder(String(Base64.decode(Constants.getDBPassphrase(), Base64.DEFAULT))))
         return Room.databaseBuilder(application, AppDatabase::class.java, "appDatabase")
             .fallbackToDestructiveMigration()
-            .openHelperFactory(factory)
+//            .openHelperFactory(factory)
             .build()
     }
 

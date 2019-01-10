@@ -2,6 +2,8 @@ package addam.com.my.skeletonApp.di
 
 import addam.com.my.skeletonApp.feature.login.LoginActivity
 import addam.com.my.skeletonApp.feature.login.LoginActivityModule
+import addam.com.my.skeletonApp.feature.main.MainActivity
+import addam.com.my.skeletonApp.feature.main.MainActivityModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -13,5 +15,8 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = [(LoginActivityModule::class)])
     abstract fun bindLoginActivity(): LoginActivity
+
+    @ContributesAndroidInjector(modules = [(MainActivityModule::class)])
+    abstract fun bindMainActivity() : MainActivity
 
 }

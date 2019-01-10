@@ -62,7 +62,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/login"
                 android:layout_marginTop="@dimen/space_medium_16dp"
                 style="@style/ConfirmButton"
-                android:text="@string/login"
+                android:text="@string/testLogin"
                 android:onClick="@{()-> viewmodel.onSampleLoginClicked()}"/>
     </android.support.constraint.ConstraintLayout>
 </layout>
