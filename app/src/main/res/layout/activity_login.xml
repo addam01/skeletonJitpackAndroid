@@ -16,5 +16,53 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+        <android.support.constraint.Guideline
+                android:id="@+id/left_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/space_large_24dp" />
+
+        <android.support.constraint.Guideline
+                android:id="@+id/right_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/space_large_24dp" />
+        
+        <addam.com.my.skeletonApp.widgets.CustomEditText
+                android:id="@+id/username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/left_guideline"
+                app:layout_constraintRight_toRightOf="@+id/right_guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/BaseTextView.OpenSansRegular"
+                app:has_next_focus="true"
+                app:hint_text="@string/username"
+                app:header_text="@string/username"
+                app:keyboard_layout="login_username"/>
+        <Button
+                android:id="@+id/login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/left_guideline"
+                app:layout_constraintRight_toRightOf="@+id/right_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/username"
+                android:layout_marginTop="@dimen/space_medium_16dp"
+                style="@style/ConfirmButton"
+                android:text="@string/login"
+                android:onClick="@{()-> viewmodel.onLoginClicked()}"/>
+        <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/left_guideline"
+                app:layout_constraintRight_toRightOf="@+id/right_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/login"
+                android:layout_marginTop="@dimen/space_medium_16dp"
+                style="@style/ConfirmButton"
+                android:text="@string/login"
+                android:onClick="@{()-> viewmodel.onSampleLoginClicked()}"/>
     </android.support.constraint.ConstraintLayout>
 </layout>

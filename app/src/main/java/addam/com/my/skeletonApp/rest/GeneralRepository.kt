@@ -1,5 +1,6 @@
 package addam.com.my.skeletonApp.rest
 
+import addam.com.my.skeletonApp.rest.model.SampleLoginResponse
 import addam.com.my.skeletonApp.rest.model.SampleUserResponse
 import io.reactivex.Single
 import javax.inject.Inject
@@ -13,4 +14,7 @@ class GeneralRepository @Inject constructor(private val api: GeneralService){
 
     fun getUser(username: String): Single<SampleUserResponse> =
             api.getUsers(username)
+
+    fun getLogin(): Single<SampleLoginResponse> =
+            api.getlogin()
 }

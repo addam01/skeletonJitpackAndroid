@@ -40,7 +40,8 @@ class AppModule {
 
     companion object {
         // API Repository
-        private const val URL = "https://api.github.com/"
+//        private const val URL = "https://api.github.com/"
+        private const val URL = "https://my-json-server.typicode.com/addam01/demoJson/"
     }
 
     @Provides

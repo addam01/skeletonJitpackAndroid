@@ -1,5 +1,6 @@
 package addam.com.my.skeletonApp.core
 
+import addam.com.my.skeletonApp.feature.login.LoginActivity
 import addam.com.my.skeletonApp.feature.main.MainActivity
 
 /**
@@ -7,7 +8,8 @@ import addam.com.my.skeletonApp.feature.main.MainActivity
  */
 class Router {
     enum class Destination {
-        LOGIN
+        LOGIN,
+        MAIN
     }
 
     enum class Parameter{
@@ -18,8 +20,11 @@ class Router {
     companion object {
         fun getClass(destination: Destination): Class<*> {
             return when (destination) {
-                Destination.LOGIN -> MainActivity::class.java
-
+                Destination.LOGIN -> LoginActivity::class.java
+                Destination.MAIN -> MainActivity::class.java
+                else -> {
+                    TODO("Implement Default case")
+                }
             }
         }
     }
