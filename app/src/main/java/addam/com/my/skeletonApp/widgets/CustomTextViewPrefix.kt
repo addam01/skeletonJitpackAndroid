@@ -3,24 +3,21 @@ package addam.com.my.skeletonApp.widgets
 import addam.com.my.skeletonApp.R
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Rect
 import android.util.AttributeSet
-import android.widget.TextView
-import android.text.TextPaint
 
 
 /**
 * Created by Addam on 8/12/2017.
 */
-class CustomTextViewPrefix(context: Context, attrs: AttributeSet) : TextView(context, attrs) {
+class CustomTextViewPrefix(context: Context, attrs: AttributeSet) : androidx.appcompat.widget.AppCompatTextView(context, attrs) {
 
     var prefix : String = ""
     var suffix : String = ""
 
     init {
         val typeArray = context.obtainStyledAttributes(attrs, R.styleable.CustomTextViewPrefix)
-        prefix = typeArray.getString(R.styleable.CustomTextViewPrefix_textPrefix)
-        suffix = typeArray.getString(R.styleable.CustomTextViewPrefix_textSuffix)
+        prefix = typeArray.getString(R.styleable.CustomTextViewPrefix_textPrefix).toString()
+        suffix = typeArray.getString(R.styleable.CustomTextViewPrefix_textSuffix).toString()
         typeArray.recycle()
     }
 

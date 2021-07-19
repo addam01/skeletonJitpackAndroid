@@ -2,7 +2,7 @@ package addam.com.my.skeletonApp.core
 
 import android.content.Context
 import android.content.Intent
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 
 /**
  * Created by Addam on 7/1/2019.

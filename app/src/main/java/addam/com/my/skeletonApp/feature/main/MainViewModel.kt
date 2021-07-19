@@ -5,18 +5,19 @@ import addam.com.my.skeletonApp.database.DatabaseRepository
 import addam.com.my.skeletonApp.database.User
 import addam.com.my.skeletonApp.utilities.ObservableString
 import addam.com.my.skeletonApp.utilities.observe
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import com.github.ajalt.timberkt.Timber
-import io.reactivex.Completable
-import io.reactivex.CompletableObserver
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.core.Completable
+import io.reactivex.rxjava3.core.CompletableObserver
+import io.reactivex.rxjava3.disposables.Disposable
+import io.reactivex.rxjava3.schedulers.Schedulers
+import javax.inject.Inject
 
 /**
  * Created by Addam on 10/1/2019.
  */
-class MainViewModel(private val databaseRepository: DatabaseRepository, private val appPreference: AppPreference): ViewModel() {
+class MainViewModel @Inject constructor(private val databaseRepository: DatabaseRepository, private val appPreference: AppPreference): ViewModel() {
 
     var username = ObservableString("")
 
@@ -30,7 +31,7 @@ class MainViewModel(private val databaseRepository: DatabaseRepository, private 
             databaseRepository.insertUser(user)
         }.observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
-            .subscribe(object: CompletableObserver{
+            .subscribe(object: CompletableObserver {
                 override fun onComplete() {
                     Timber.d{"Success insert $username"}
                 }

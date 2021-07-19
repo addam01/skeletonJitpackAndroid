@@ -9,19 +9,20 @@ import addam.com.my.skeletonApp.rest.GeneralRepository
 import addam.com.my.skeletonApp.rest.model.SampleLoginResponse
 import addam.com.my.skeletonApp.rest.model.SampleUserResponse
 import addam.com.my.skeletonApp.utilities.ObservableString
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import com.github.ajalt.timberkt.Timber
-import io.reactivex.Single
-import io.reactivex.rxkotlin.subscribeBy
+import io.reactivex.rxjava3.core.Single
+import io.reactivex.rxjava3.kotlin.subscribeBy
+import javax.inject.Inject
 
-class LoginViewModel(
+class LoginViewModel @Inject constructor(
     private val schdulerProvider: SchedulerProvider,
     private val generalRepository: GeneralRepository, private val appPreference: AppPreference) : ViewModel() {
 
     var username = ObservableString("")
     val startPinActivityEvent: StartActivityEvent = StartActivityEvent()
 
-    private fun callUserDetailApi(): Single<SampleUserResponse>{
+    private fun callUserDetailApi(): Single<SampleUserResponse> {
         return generalRepository.getUser(username.get().toString()).compose(schdulerProvider.getSchedulersForSingle())
     }
 

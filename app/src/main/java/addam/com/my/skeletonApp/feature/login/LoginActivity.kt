@@ -7,8 +7,8 @@ import addam.com.my.skeletonApp.core.Router
 import addam.com.my.skeletonApp.core.event.StartActivityEvent
 import addam.com.my.skeletonApp.core.event.StartActivityModel
 import addam.com.my.skeletonApp.databinding.ActivityLoginBinding
-import android.databinding.DataBindingUtil
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
@@ -26,7 +26,7 @@ class LoginActivity : BaseActivity() {
 
         val binding: ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
         binding.viewmodel = viewModel
-        binding.setLifecycleOwner(this)
+        binding.lifecycleOwner = this
 
         setupEvents()
     }

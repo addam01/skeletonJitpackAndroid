@@ -5,16 +5,17 @@ import addam.com.my.skeletonApp.R
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.support.v4.content.ContextCompat
-import android.support.v7.content.res.AppCompatResources
-import android.support.v7.widget.AppCompatDrawableManager
 import android.util.AttributeSet
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.appcompat.widget.AppCompatDrawableManager
+import androidx.core.content.ContextCompat
+import com.google.android.material.textfield.TextInputEditText
 
 /**
  * Created by Arman on 11/9/2017.
  */
 
-open class InputEditText : android.support.design.widget.TextInputEditText {
+open class InputEditText : TextInputEditText {
     enum class InputEditTextState {
         NORMAL,
         FOCUSED,

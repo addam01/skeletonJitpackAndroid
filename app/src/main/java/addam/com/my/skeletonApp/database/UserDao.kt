@@ -1,10 +1,11 @@
 package addam.com.my.skeletonApp.database
 
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.OnConflictStrategy
-import android.arch.persistence.room.Query
-import io.reactivex.Single
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import io.reactivex.rxjava3.core.Single
+
 
 /**
  * Created by Addam on 7/1/2019.

@@ -5,8 +5,8 @@ import addam.com.my.skeletonApp.R
 import addam.com.my.skeletonApp.core.BaseActivity
 import addam.com.my.skeletonApp.core.Router
 import addam.com.my.skeletonApp.databinding.ActivityMainBinding
-import android.databinding.DataBindingUtil
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 

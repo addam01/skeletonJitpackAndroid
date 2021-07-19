@@ -1,7 +1,7 @@
 package addam.com.my.skeletonApp.core.event
 
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.Observer
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 
 /**
  * Created by Arman on 12/12/2017.

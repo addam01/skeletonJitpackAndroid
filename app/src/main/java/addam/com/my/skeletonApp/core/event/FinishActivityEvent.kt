@@ -1,8 +1,9 @@
 package addam.com.my.skeletonApp.core.event
 
 import addam.com.my.skeletonApp.core.Router
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.Observer
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
+
 /**
  * Created by Addam on 7/1/2019.
  */

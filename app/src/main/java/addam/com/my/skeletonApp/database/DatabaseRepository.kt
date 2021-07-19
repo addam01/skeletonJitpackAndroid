@@ -1,6 +1,6 @@
 package addam.com.my.skeletonApp.database
 
-import io.reactivex.Single
+import io.reactivex.rxjava3.core.Single
 import javax.inject.Inject
 import javax.inject.Singleton
 

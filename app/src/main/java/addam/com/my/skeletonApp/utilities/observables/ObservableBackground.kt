@@ -1,10 +1,10 @@
 package addam.com.my.skeletonApp.utilities.observables
 
-import android.databinding.BaseObservable
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
-import android.support.annotation.ColorRes
-import android.support.annotation.DrawableRes
+import androidx.annotation.ColorRes
+import androidx.annotation.DrawableRes
+import androidx.databinding.BaseObservable
 
 /**
  * Created by Addam on 7/1/2019.

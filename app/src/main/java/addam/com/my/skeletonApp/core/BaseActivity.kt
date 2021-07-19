@@ -2,12 +2,9 @@ package addam.com.my.skeletonApp.core
 
 import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
-import android.net.ConnectivityManager
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.WindowManager
-import com.github.ajalt.timberkt.Timber
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * Created by Addam on 7/1/2019.

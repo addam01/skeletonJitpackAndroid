@@ -2,7 +2,6 @@ package addam.com.my.skeletonApp
 
 import android.app.Activity
 import android.app.Application
-import android.content.Intent
 import android.os.Bundle
 import android.os.Process
 
@@ -18,36 +17,36 @@ class AppExceptionHandler(private val systemHandler: Thread.UncaughtExceptionHan
     init {
         application.registerActivityLifecycleCallbacks(
                 object : Application.ActivityLifecycleCallbacks {
-                    override fun onActivityPaused(activity: Activity?) {
+                    override fun onActivityPaused(activity: Activity) {
                         // empty
                     }
 
-                    override fun onActivityResumed(activity: Activity?) {
+                    override fun onActivityResumed(activity: Activity) {
                         // empty
                     }
 
-                    override fun onActivityStarted(activity: Activity?) {
+                    override fun onActivityStarted(activity: Activity) {
                         startCount++
                         lastStartedActivity = activity
                     }
 
-                    override fun onActivityDestroyed(activity: Activity?) {
+                    override fun onActivityDestroyed(activity: Activity) {
                         // empty
                     }
 
-                    override fun onActivitySaveInstanceState(activity: Activity?,
-                                                             outState: Bundle?) {
+                    override fun onActivitySaveInstanceState(activity: Activity,
+                                                             outState: Bundle) {
                         // empty
                     }
 
-                    override fun onActivityStopped(activity: Activity?) {
+                    override fun onActivityStopped(activity: Activity) {
                         startCount--
                         if (startCount <= 0) {
                             lastStartedActivity = null
                         }
                     }
 
-                    override fun onActivityCreated(activity: Activity?,
+                    override fun onActivityCreated(activity: Activity,
                                                    savedInstanceState: Bundle?) {
                         // empty
                     }

@@ -1,9 +1,10 @@
 package addam.com.my.skeletonApp.core.event
 
 import addam.com.my.skeletonApp.core.Router
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.Observer
+
 import android.os.Bundle
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 
 /**
  * Created by Arman on 12/12/2017.
@@ -29,4 +30,4 @@ open class StartActivityEvent : SingleLiveEvent<StartActivityModel>() {
     }
 }
 
-data class StartActivityModel(val to: Router.Destination, val parameters: HashMap<Router.Parameter, Any?> = hashMapOf(), val hasResults: Boolean = false, val clearHistory: Boolean = false, val singleTask: Boolean = false, val transition: Bundle? = Bundle.EMPTY)
+data class StartActivityModel(val to: Router.Destination, @Suppress("ReplaceWithEnumMap") val parameters: HashMap<Router.Parameter, Any?> = hashMapOf(), val hasResults: Boolean = false, val clearHistory: Boolean = false, val singleTask: Boolean = false, val transition: Bundle? = Bundle.EMPTY)

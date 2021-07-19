@@ -1,7 +1,7 @@
 package addam.com.my.skeletonApp
 
-import android.support.annotation.Keep
 import android.util.Base64
+import androidx.annotation.Keep
 import com.github.ajalt.timberkt.Timber
 import java.io.UnsupportedEncodingException
 

@@ -2,7 +2,7 @@ package addam.com.my.skeletonApp.rest
 
 import addam.com.my.skeletonApp.rest.model.SampleLoginResponse
 import addam.com.my.skeletonApp.rest.model.SampleUserResponse
-import io.reactivex.Single
+import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
 

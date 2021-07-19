@@ -1,26 +1,24 @@
-package addam.com.my.skeletonApp.di
+package addam.com.my.skeletonApp.di.modules
 
 import addam.com.my.skeletonApp.AppPreference
 import addam.com.my.skeletonApp.AppResourceProvider
 import addam.com.my.skeletonApp.core.Router
 import addam.com.my.skeletonApp.core.util.SchedulerProvider
-import addam.com.my.skeletonApp.database.AppDatabase
 import addam.com.my.skeletonApp.rest.GeneralService
 import android.app.Application
-import android.arch.persistence.room.Room
 import android.content.Context
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.util.*
@@ -32,7 +30,7 @@ import javax.inject.Singleton
  * Created by Addam on 7/1/2019.
  */
 @Module
-class AppModule {
+class NetworkModule {
 
     companion object {
         // API Repository
@@ -61,20 +59,6 @@ class AppModule {
     fun provideGson(): Gson =
         GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .create()
-
-    @Provides
-    @Singleton
-    fun provideDb(application: Application): AppDatabase {
-//        val factory = SafeHelperFactory.fromUser(SpannableStringBuilder(String(Base64.decode(Constants.getDBPassphrase(), Base64.DEFAULT))))
-        return Room.databaseBuilder(application, AppDatabase::class.java, "appDatabase")
-            .fallbackToDestructiveMigration()
-//            .openHelperFactory(factory)
-            .build()
-    }
-
-    @Provides
-    @Singleton
-    fun provideUserDao(db: AppDatabase) = db.userDao()
 
     /**
      * If your API has token and you need to refresh it with interceptor, use this
@@ -133,7 +117,7 @@ class AppModule {
         return Retrofit.Builder()
             .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create(gson))
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .client(okHttpClient)
             .build().create(GeneralService::class.java)
     }

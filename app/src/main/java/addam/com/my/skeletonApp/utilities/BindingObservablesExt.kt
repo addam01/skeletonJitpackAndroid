@@ -1,12 +1,12 @@
 package addam.com.my.skeletonApp.utilities
 
-import android.databinding.*
 import android.os.Parcelable
-import io.reactivex.Observable
-import io.reactivex.Observable.create
+import androidx.databinding.*
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Observable.create
 import java.lang.Math.max
 import java.lang.Math.min
-import android.databinding.Observable as DataBindingObservable
+import androidx.databinding.Observable as DataBindingObservable
 
 /**
  * Created by Arman on 11/20/2017.
@@ -21,7 +21,7 @@ import android.databinding.Observable as DataBindingObservable
 private inline fun <T : DataBindingObservable, R : Any?> T.observe(
         crossinline block: (T) -> R
 ): Observable<R> = create { subscriber ->
-    object : android.databinding.Observable.OnPropertyChangedCallback() {
+    object : androidx.databinding.Observable.OnPropertyChangedCallback() {
         override fun onPropertyChanged(observable: DataBindingObservable, id: Int) = try {
             subscriber.onNext(block(observable as T))
         } catch (e: Exception) {

@@ -1,15 +1,16 @@
-apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
     defaultConfig {
         applicationId "addam.com.my.skeleton_app"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -19,6 +20,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 
     dataBinding {
@@ -34,56 +43,59 @@ dependencies {
     androidExtensions {
         experimental = true
     }
-    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
-    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
-    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
-    implementation 'com.github.ajalt:timberkt:1.5.0'
-    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-scalars:$retrofit_version"
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
-    implementation "android.arch.lifecycle:extensions:$architecture_components"
-    implementation "com.android.support:appcompat-v7:$supportLibVersion"
-    implementation "com.android.support:support-media-compat:$supportLibVersion"
-    implementation "com.android.support:support-v4:$supportLibVersion"
-    implementation "com.android.support:exifinterface:$supportLibVersion"
-    implementation "com.android.support:support-compat:$supportLibVersion"
-    implementation "com.android.support:design:$supportLibVersion"
-    implementation "com.android.support:cardview-v7:$supportLibVersion"
-    implementation "com.android.support:recyclerview-v7:$supportLibVersion"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.github.ajalt:timberkt:1.5.1'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+//    implementation files('libs/mykadlibrary-release.aar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.5.0-alpha01'
+    implementation 'org.jetbrains.anko:anko-common:0.9'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.3.1'
+    implementation "android.arch.work:work-runtime-ktx:1.0.1"
 
     // room
-    implementation "android.arch.persistence.room:runtime:$roomVersion"
-    kapt "android.arch.persistence.room:compiler:$roomVersion"
-    implementation "android.arch.persistence.room:rxjava2:$roomVersion"
-    androidTestImplementation "android.arch.persistence.room:testing:$roomVersion"
+    kapt "androidx.room:room-compiler:2.3.0"
+    implementation "androidx.room:room-runtime:2.3.0"
+    implementation 'androidx.room:room-rxjava3:2.3.0'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+//    androidTestImplementation "android.arch.persistence.room:testing:2.3.0"
 
-    // dagger
-    implementation "com.google.dagger:dagger:$daggerVersion"
-    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-    implementation "com.google.dagger:dagger-android:$daggerVersion"
-    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
-    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
-
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson:2.8.6'
 //    implementation 'com.zhihu.android:matisse:0.5.0-beta3'
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     // Dependencies for local unit tests
-    testImplementation "junit:junit:$junitVersion"
+    testImplementation "junit:junit:4.13.2"
 
     //testCompile "org.mockito:mockito-all:$mockitoVersion"
-    testImplementation "org.mockito:mockito-core:$mockitoVersion"
-    testImplementation "org.hamcrest:hamcrest-all:$hamcrestVersion"
-    testImplementation "android.arch.core:core-testing:$architecture_components"
+    testImplementation "org.mockito:mockito-core:3.1.0"
+    testImplementation "org.hamcrest:hamcrest-all:1.3"
 
-    // Android Testing Support Library's runner and rules
-    androidTestImplementation "com.android.support.test:runner:$runnerVersion"
-    androidTestImplementation "com.android.support.test:rules:$rulesVersion"
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
-    androidTestImplementation "com.android.support.test.espresso:espresso-intents:$espressoVersion"
-    androidTestImplementation "org.hamcrest:hamcrest-library:$hamcrestVersion"
-    implementation 'com.commonsware.cwac:saferoom:0.4.4'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+
+    //Dagger
+    implementation 'com.google.dagger:dagger:2.36'
+    kapt 'com.google.dagger:dagger-compiler:2.36'
+    kapt 'com.google.dagger:dagger-android-processor:2.36'
+    implementation 'com.google.dagger:dagger-android-support:2.36'
+
+    //RxJava
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.8'
+    implementation 'io.reactivex.rxjava3:rxkotlin:3.0.1'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
 }

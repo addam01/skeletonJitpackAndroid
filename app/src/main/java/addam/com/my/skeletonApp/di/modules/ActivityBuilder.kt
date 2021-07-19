@@ -1,4 +1,4 @@
-package addam.com.my.skeletonApp.di
+package addam.com.my.skeletonApp.di.modules
 
 import addam.com.my.skeletonApp.feature.login.LoginActivity
 import addam.com.my.skeletonApp.feature.login.LoginActivityModule

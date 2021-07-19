@@ -12,25 +12,25 @@
 
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/left_guideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_begin="@dimen/space_large_24dp" />
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/right_guideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_end="@dimen/space_large_24dp" />
         
-        <addam.com.my.skeletonApp.widgets.CustomEditText
+        <EditText
                 android:id="@+id/username"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -38,11 +38,7 @@
                 app:layout_constraintRight_toRightOf="@+id/right_guideline"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                style="@style/BaseTextView.OpenSansRegular"
-                app:has_next_focus="true"
-                app:hint_text="@string/username"
-                app:header_text="@string/username"
-                app:keyboard_layout="login_username"/>
+                style="@style/BaseTextView.OpenSansRegular" />
         <Button
                 android:id="@+id/login"
                 android:layout_width="0dp"
@@ -64,5 +60,5 @@
                 style="@style/ConfirmButton"
                 android:text="@string/testLogin"
                 android:onClick="@{()-> viewmodel.onSampleLoginClicked()}"/>
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

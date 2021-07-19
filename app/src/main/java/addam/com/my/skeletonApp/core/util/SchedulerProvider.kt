@@ -1,7 +1,7 @@
 package addam.com.my.skeletonApp.core.util
 
-import io.reactivex.Scheduler
-import io.reactivex.Single
+import io.reactivex.rxjava3.core.Scheduler
+import io.reactivex.rxjava3.core.Single
 
 /**
  * Created by Addam on 7/1/2019.
